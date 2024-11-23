@@ -1,0 +1,21 @@
+CREATE TABLE User (
+    UserID INT PRIMARY KEY AUTO_INCREMENT,
+    Name VARCHAR(255),
+    Email VARCHAR(255) UNIQUE
+);
+
+CREATE TABLE Workout (
+    WorkoutID INT PRIMARY KEY AUTO_INCREMENT,
+    UserID INT,
+    Name VARCHAR(255),
+    Calories INT,
+    FOREIGN KEY (User ID) REFERENCES User(UserID)
+);
+
+CREATE TABLE DietPlan (
+    DietID INT PRIMARY KEY AUTO_INCREMENT,
+    UserID INT,
+    Meal VARCHAR(255),
+    Calories INT,
+    FOREIGN KEY (User ID) REFERENCES User(UserID)
+);
